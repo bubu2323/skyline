@@ -1,0 +1,14 @@
+.scene {
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 100vh;
+
+  text-align: center;
+}
+.controls{
+    margin: 0 auto;
+    width: 9.5em;
+}
+.controls button{
+ 
+}
