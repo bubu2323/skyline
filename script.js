@@ -31,3 +31,11 @@ controls.addEventListener("click", (e) => {
         edited.classList.add('night')
     }
 });
+
+
+// const jsConfetti = new JSConfetti()
+// function x() {
+//     jsConfetti.addConfetti();  
+// }
+
+// document.querySelector('confetti').addEventListener('click', x)

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- confetti js -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="controls.css">
@@ -286,14 +288,30 @@
                 </div>
             </div>
             <div class="controls">
-                <button id="day_btn">day</button>
-                <button id="sunset_btn">sunset</button>
-                <button id="night_btn">night</button>
+                <button id="day_btn">🌅</button>
+                <button id="sunset_btn">🌆</button>
+                <button id="night_btn">🌙</button>
+                <button id="confetti">🎉</button>
+
             </div>
         </div>
+
     </div>
 
-<script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script>
+        const jsConfetti = new JSConfetti();
+
+        function confetti() {
+            jsConfetti.addConfetti({
+                emojis: ['✨'],
+                emojiSize: 10,
+                confettiNumber: 300,
+            })
+            jsConfetti.addConfetti();
+        }
+        document.querySelector('#confetti').addEventListener('click', () => { confetti() });
+    </script>
 </body>
 
 </html>
